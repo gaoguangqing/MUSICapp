@@ -31,6 +31,7 @@ function getJsonData () {
 			var music=new Music();
 			music.src=data[i].src;
 			music.img=data[i].img;
+			
 			music.num=data[i].num;
 			music.musicName=data[i].musicName;
 			music.name=data[i].name;
@@ -50,8 +51,8 @@ function insertData(){
 		var $div=$("<div class='music' data-index="+i+"></div>");
 		$(".page_slide .content").append($div);
 		
-		var $img=$("<img src="+musicModel[i].img+"/>");
-		
+		var $img=$("<img src="+musicModel[i].img+">");
+		console.log(musicModel[i].img);
 		$div.append($img);
 		
 		var $p=$("<p>"+musicModel[i].musicName+"-"+musicModel[i].name+"</p>");
